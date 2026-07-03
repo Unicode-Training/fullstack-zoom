@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="fullname">Họ tên</label>
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          placeholder="Nhập họ và tên..."
+        />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Nhập Email..."
+        />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Nhập Mật khẩu..."
+        />
+      </div>
+      <div>
+        <label for="age">Tuổi</label>
+        <input type="number" id="age" name="age" placeholder="Nhập tuổi..." />
+      </div>
+      <div>
+        <label for="message">Tin nhắn</label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Tin nhắn..."
+        ></textarea>
+      </div>
+      <div>
+        <label>Sở thích</label>
+        <label>
+          <input type="checkbox" name="sothich" value="music" /> Nghe nhạc
+        </label>
+        <label>
+          <input type="checkbox" name="sothich" value="movies" /> Xem phim
+        </label>
+      </div>
+      <div>
+        <label>Giới tính</label>
+        <label> <input type="radio" name="gender" value="male" /> Nam </label>
+        <label> <input type="radio" name="gender" value="female" /> Nữ </label>
+      </div>
+      <div>
+        <label for="avatar">Avatar</label>
+        <input type="file" id="avatar" hidden />
+      </div>
+      <div>
+        <label for="province">Chọn Tỉnh/Thành phố</label>
+        <select name="province" id="province">
+          <option value="">Chọn Tỉnh/Thành phố</option>
+          <option value="1">Hà Nội</option>
+          <option value="2">Đà Nẵng</option>
+          <option value="3">Hồ Chí Minh</option>
+        </select>
+      </div>
+      <div>
+        <label for="birthday">Ngày sinh</label>
+        <input type="date" id="birthday" />
+      </div>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
