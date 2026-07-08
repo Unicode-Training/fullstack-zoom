@@ -1,0 +1,25 @@
+/* ul span:first-of-type {
+  color: red;
+}
+
+ul :last-child {
+  color: green;
+} */
+
+/* ul span:last-of-type {
+  color: green;
+} */
+
+ul li:first-child {
+  color: red;
+}
+ul li:last-child {
+  color: green;
+}
+
+ul span:first-child {
+  color: blue;
+}
+ul span:last-child {
+  color: yellowgreen;
+}

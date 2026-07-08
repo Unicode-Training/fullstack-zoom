@@ -1,0 +1,59 @@
+/* .title::before {
+  content: "a";
+}
+.title::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: red;
+  border-radius: 50%;
+}
+
+p::first-letter {
+  color: red;
+}
+p::first-line {
+  color: blueviolet;
+}
+p::selection {
+  background: black;
+  color: #fff;
+}
+.search {
+  background: rgb(16, 197, 247);
+  padding: 20px;
+}
+input {
+  background: transparent;
+  border: 1px solid #efefef;
+  color: #fff;
+}
+
+textarea {
+  background: transparent;
+}
+
+.search ::placeholder {
+  color: #fff;
+} */
+
+/* h2 {
+  color: red;
+}
+h2:hover {
+  color: blueviolet;
+}
+h2:active {
+  color: blue;
+} */
+
+input:focus {
+  background: yellowgreen;
+}
+button:focus {
+  background: yellow;
+}
+h2:focus {
+  color: red;
+}
