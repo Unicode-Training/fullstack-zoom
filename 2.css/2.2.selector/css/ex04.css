@@ -1,0 +1,76 @@
+/* ul li:nth-of-type(odd) {
+  color: red;
+} */
+
+/*2n*/
+
+/* input:checked + span {
+  text-decoration: line-through;
+} */
+
+/* input:disabled {
+  background: rgb(170, 169, 169);
+  border: 0;
+} */
+
+/* fieldset:disabled {
+  background: yellowgreen;
+} */
+
+/* ul li:not(.inactive):not(.ignore) {
+  color: red;
+} */
+
+/* input:valid + span {
+  color: red;
+} */
+
+/* .item:has(span) {
+  background: yellow;
+} */
+
+/* label:has(input:checked) {
+  background: yellow;
+} */
+/* html {
+  font-size: 18px;
+}
+body {
+  font-size: 20px;
+}
+.box {
+  font-size: 1.5em;
+}
+.box p {
+  width: 3em;
+} */
+/* * {
+  padding: 0;
+  margin: 0;
+} */
+/* body {
+  height: 2000px;
+}
+.box {
+  width: 400px;
+}
+.box p {
+  width: 100vw;
+  background: red;
+} */
+
+/* button {
+  border: 3px solid currentColor;
+  color: green;
+}
+
+button:hover {
+  color: red;
+} */
+
+.heading-1 {
+  color: rgb(254, 85, 0);
+}
+.heading-2 {
+  color: rgba(254, 85, 0, 0.556);
+}
