@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: yellow;
+  background-image: url("https://fastly.picsum.photos/id/663/600/1600.jpg?hmac=50wbsXvGMjgIySHS5feDBNkzK2lExnfSWT3PUO_Tz2c");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+h1 {
+  background-color: aqua;
+}

@@ -1,0 +1,40 @@
+/* html {
+  font-size: 15px;
+}
+body {
+  font-size: 1.6rem;
+}
+.text {
+  font-size: 2rem;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@font-face {
+  font-family: "SVN Fontbox";
+  src: url("../fonts/SVN-Fontbox-Boathouse-Filled.otf");
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2;
+  text-align: left;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: -1px;
+  word-spacing: 10px;
+}
+
+h1 span {
+  font-family: "SVN Fontbox", sans-serif;
+  font-size: 4rem;
+  font-style: italic;
+}
+.link-wrap {
+  text-align: center;
+}
+h1 {
+  /* text-decoration: overline underline line-through; */
+  text-transform: none;
+}
+.link-wrap a {
+  text-decoration: none;
+}
