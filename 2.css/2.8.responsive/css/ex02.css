@@ -1,0 +1,43 @@
+/* body {
+  color: red;
+}
+
+@media screen and (max-width: 1199.98px) {
+  p {
+    color: blue;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  body {
+    color: yellow;
+  }
+  h1 {
+    color: blueviolet;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  body {
+    color: green;
+  }
+} */
+
+body {
+  color: green;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    color: yellow;
+  }
+  h1 {
+    color: blueviolet;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    color: red;
+  }
+}

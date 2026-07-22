@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+html {
+  font-size: 10px;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: Inter, sans-serif;
+  color: #333;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.header {
+  padding-block: 20px;
+}
+.header .header-inner {
+  display: flex;
+  align-items: center;
+}
+.header .header-inner nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header .header-inner .menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header .header-inner .menu a:hover {
+  color: #1093f8;
+}
+.header .header-inner nav a {
+  font-weight: 500;
+}
+.header .header-inner .btn {
+  background: #75b8eb;
+  color: #fff;
+  padding: 7px 20px;
+  border-radius: 999px;
+}
+.header .header-inner .btn:hover {
+  background: #47a6ee;
+}
+.header .header-inner .menu-bar {
+  display: none;
+}
+.header .header-inner .menu-overlay {
+  display: none;
+}
+.header .header-inner .menu .menu-close {
+  display: none;
+}
+@media screen and (max-width: 1199.98px) {
+  .container {
+    padding-inline: 15px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .header .header-inner .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -220px;
+    bottom: 0;
+    z-index: 999;
+    width: 220px;
+    background: #333;
+    color: #fff;
+    height: 100%;
+    overflow: auto;
+    transition: left 0.3s;
+    padding: 10px;
+  }
+  .header .header-inner .menu-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 990;
+    background: rgba(0, 0, 0, 0.524);
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition: 0.3s;
+  }
+  .header .header-inner .menu .menu-close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #dddddd84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 50%;
+  }
+  .header .header-inner input:checked ~ .menu {
+    left: 0;
+  }
+  .header .header-inner input:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  .header .header-inner .menu a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+  }
+  .header .header-inner .menu-bar {
+    display: block;
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .header .header-inner .btn {
+    display: none;
+  }
+}

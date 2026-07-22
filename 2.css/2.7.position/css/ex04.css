@@ -21,6 +21,10 @@ a {
   z-index: 999;
   transition: left 0.3s;
 }
+.menu ul {
+  overflow: auto;
+  height: 100%;
+}
 #toggle:checked ~ .menu {
   left: 0;
 }
