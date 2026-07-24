@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: Inter, sans-serif;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.products {
+  padding: 30px 0;
+}
+.products .heading {
+  text-align: center;
+  padding: 15px;
+}
+.products .product-list {
+  --column: 4;
+  --gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+.products .product-list .product-item {
+  max-width: calc(
+    100% / var(--column) - var(--gap) + var(--gap) / var(--column)
+  );
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+@media screen and (max-width: 1199.98px) {
+  .container {
+    padding-inline: 15px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .products .product-list {
+    --column: 3;
+    --gap: 15px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .products .product-list {
+    --column: 2;
+    --gap: 15px;
+  }
+}

@@ -1,0 +1,83 @@
+/* :root {
+  --primary-color: rgb(250, 104, 0);
+  --secondary-color: rgb(11, 158, 50);
+}
+h1 {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+h1:hover {
+  --primary-color: blue;
+}
+p {
+  background: var(--secondary-color);
+} */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+:root {
+  --primary-color: rgb(250, 104, 0);
+  --secondary-color: rgb(11, 158, 50);
+  --text-base: #999;
+  --body-bg: #fff;
+}
+.dark {
+  --primary-color: white;
+  --secondary-color: white;
+  --text-base: white;
+  --body-bg: #333;
+}
+body {
+  background: var(--body-bg);
+}
+h1 {
+  color: var(--primary-color);
+}
+h2 {
+  color: var(--secondary-color);
+}
+p {
+  color: var(--text-base);
+}
+
+.products {
+  --heading-color: #333;
+  --border-color: blueviolet;
+  width: 250px;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  h2 {
+    color: var(--heading-color);
+    &:hover {
+      border-bottom: 1px solid red;
+    }
+  }
+  &:hover {
+    --border-color: red;
+    --heading-color: blueviolet;
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    button {
+      border: 0;
+      background: green;
+      color: #fff;
+      padding: 20px 5px;
+      &:hover {
+        background: yellow;
+      }
+    }
+  }
+}
+/* .products h2 {
+  color: var(--heading-color);
+}
+.products:hover {
+  --border-color: red;
+  --heading-color: blueviolet;
+} */

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ex04.css" />
+  </head>
+  <body>
+    <button class="js-theme-btn">Change Theme</button>
+    <h1>Hello anh em</h1>
+    <h2>Học css không khó</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi iste
+      impedit suscipit asperiores consequuntur neque qui. Facere repudiandae
+      quae esse minus. Illo tempora laudantium ratione nihil expedita, sed vel
+      alias.
+    </p>
+    <div class="products">
+      <h2 class="title">Tên sản phẩm</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+        inventore repudiandae necessitatibus quod molestias vero voluptates
+        aperiam impedit aspernatur natus harum, itaque quam nulla provident
+        possimus corrupti aliquid recusandae nostrum?
+      </p>
+      <div class="info">
+        <span> 12.000 đ </span>
+        <button>Add to cart</button>
+      </div>
+    </div>
+    <script>
+      const themeBtn = document.querySelector(".js-theme-btn");
+      themeBtn.addEventListener("click", () => {
+        document.querySelector("html").classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: Inter, sans-serif;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+ul,
+ol {
+  list-style: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+.item-between {
+  justify-content: space-between;
+}
+.header .topbar {
+  box-shadow: 3px 3px 3px #eeeded;
+  padding: 10px 0;
+}
+.header .topbar nav {
+  max-width: 50%;
+  overflow: auto;
+}
+.header .topbar .menu {
+  gap: 30px;
+}
+.header .topbar .menu a {
+  font-weight: 500;
+  color: #000;
+}
+.header .topbar .menu a:hover,
+.header .topbar .menu li.active a {
+  color: var(--primary-color);
+}
+.header .topbar .bar-icon {
+  cursor: pointer;
+}
+.header .topbar .menu li.has-children > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header .topbar .menu li.has-children > a:after {
+  content: "\f107";
+  font-weight: 900;
+  font-family: "Font Awesome 7 Free";
+  font-size: 1.3rem;
+}
+.header .header-inner {
+  padding: 15px 0;
+}
+.header .header-inner .search {
+  width: 50%;
+  display: flex;
+}
+
+.header .header-inner .search input {
+  flex: 1;
+  border: 1px solid #64b496;
+  padding: 13px;
+  border-radius: 5px 0 0 5px;
+}
+.header .header-inner .search select {
+  padding: 13px;
+  border: solid #64b496;
+  border-width: 1px 0 1px 0;
+}
+.header .header-inner .search button {
+  padding: 13px 17px;
+  background: var(--secondary-color);
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.header .header-inner .search button:hover {
+  background: var(--primary-color);
+}
+
+.header .header-inner .action-link {
+  gap: 15px;
+}
+.header .header-inner .action-link a {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  font-weight: 500;
+}
+.header .header-inner .action-link a:hover {
+  color: var(--primary-color);
+}
+
+.word-wrap {
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 991.98px) {
+  .header .header-inner .search button:hover {
+    background: inherit;
+  }
+  .header .header-inner .search button:active {
+    background: var(--primary-color);
+  }
+}
