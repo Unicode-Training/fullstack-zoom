@@ -1,0 +1,50 @@
+.checkbox {
+  width: 400px;
+  margin: 30px auto;
+}
+.checkbox label {
+  display: block;
+  margin: 15px 0;
+}
+
+.checkbox label input {
+  display: none;
+}
+.checkbox label {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.checkbox label::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: block;
+  border: 1px solid green;
+  transition: 0.3s background;
+}
+
+.checkbox label::after {
+  content: "";
+  width: 8px;
+  height: 4px;
+  border: solid #fff;
+  border-width: 0 0 2px 2px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  transition: 0.3s;
+  transition-property: top, left, rotate;
+}
+
+.checkbox label:has(input:checked)::after {
+  left: 4px;
+  top: 5px;
+  rotate: 310deg;
+}
+
+.checkbox label:has(input:checked)::before {
+  background: blue;
+}

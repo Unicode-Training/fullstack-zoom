@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.box {
+  width: 500px;
+  height: 300px;
+  border: 1px solid red;
+  margin: 30px auto;
+}
+
+.box h2 {
+  transition-property: padding-left;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.55, 0.98, 0.38, 1.09);
+}
+
+.box:hover h2 {
+  padding-left: 200px;
+}

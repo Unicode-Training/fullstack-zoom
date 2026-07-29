@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+button {
+  padding: 10px 30px;
+  display: block;
+  margin: 30px auto;
+  background: green;
+  color: #fff;
+  border-radius: 99px;
+  position: relative;
+  overflow: hidden;
+}
+button span {
+  position: relative;
+  z-index: 1;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 100%;
+  background: red;
+  transition: right 0.3s;
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  bottom: 0;
+  right: 0;
+  background: red;
+  transition: left 0.3s;
+}
+button:hover::before {
+  right: 50%;
+}
+button:hover::after {
+  left: 50%;
+}

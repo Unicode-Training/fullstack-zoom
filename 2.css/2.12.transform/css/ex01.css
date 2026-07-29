@@ -1,0 +1,54 @@
+.box {
+  width: 400px;
+  height: 400px;
+  border: 5px solid red;
+  margin: 30px auto;
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.box span {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: green;
+  transition: all 0.3s;
+  position: relative;
+  left: 0;
+}
+
+.box:hover span {
+  /* transform: rotateY(180deg); */
+  /* rotate: 45deg; */
+  /* transform: scale(1, 1.5); */
+  /* transform: scaleY(1.5) rotate(10deg); */
+  /* scale: 1.5 0.5; */
+  /* transform: skew(30deg, 10deg); */
+  /* transform: skewY(10deg); */
+  /* transform: translate(100px, -100px); */
+  /* transform: translateY(100px); */
+
+  /* left: 100%; */
+  /* translate: 100%; */
+}
+
+.box .prev,
+.box .next {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  border: 0;
+  background: gray;
+  opacity: 0.5;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+.box .prev {
+  left: 0;
+}
+
+.box .next {
+  right: 0;
+}
