@@ -1,0 +1,16 @@
+.box {
+  width: 400px;
+  height: 400px;
+  border: 10px solid gray;
+  margin: 30px auto;
+  border-top-color: yellow;
+  border-radius: 50%;
+}
+.box:hover {
+  animation: circle-rotation 1s linear infinite;
+}
+@keyframes circle-rotation {
+  100% {
+    rotate: 360deg;
+  }
+}

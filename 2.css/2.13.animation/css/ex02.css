@@ -1,0 +1,31 @@
+.wave {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  margin: 30px auto;
+}
+.wave span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 5px;
+  animation: wave 1s ease-in-out infinite;
+}
+.wave span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+@keyframes wave {
+  50% {
+    height: 60px;
+  }
+}
