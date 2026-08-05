@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "tailwindcss";
+@important;
+@theme {
+  --font-open-sans: "Open Sans", serif;
+}
+
+@utility product-item {
+  @apply p-3 border border-gray-400;
+}
+
+.test-class {
+  @apply text-green-600 hover:text-yellow-600;
+  /* &:hover {
+    @apply text-yellow-600;
+  } */
+}
+
+.test-class2 {
+  @apply bg-yellow-400;
+}
