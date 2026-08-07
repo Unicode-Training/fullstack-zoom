@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./output/output.css" />
+  </head>
+  <body>
+    <header class="py-5">
+      <div class="flex items-center mx-auto px-5 xl:px-0 max-w-300">
+        <a href="#">
+          <img src="./images/logo-sandbox.jpg" alt="" />
+        </a>
+        <nav class="flex items-center gap-5 ml-auto">
+          <input type="checkbox" hidden id="menu-toggle" class="peer/menu" />
+          <ul
+            class="top-0 bottom-0 left-0 z-999 lg:static fixed lg:flex items-center gap-5 bg-[#333] lg:bg-transparent p-5 lg:p-0 [&>li]:py-5 lg:[&>li]:py-0 w-62.5 lg:w-auto overflow-auto text-white lg:text-inherit transition-transform lg:transition-none -translate-x-full lg:translate-x-0 peer-checked/menu:translate-x-0"
+          >
+            <li><a href="#" class="font-medium text-red-400">Menu 1</a></li>
+            <li>
+              <a href="#" class="font-medium hover:text-red-400">Menu 2</a>
+            </li>
+            <li>
+              <a href="#" class="font-medium hover:text-red-400">Menu 3</a>
+            </li>
+            <li>
+              <a href="#" class="font-medium hover:text-red-400">Menu 4</a>
+            </li>
+            <li>
+              <a href="#" class="font-medium hover:text-red-400">Menu 5</a>
+            </li>
+            <li>
+              <a href="#" class="font-medium hover:text-red-400">Menu 6</a>
+            </li>
+          </ul>
+          <label
+            for="menu-toggle"
+            class="invisible peer-checked/menu:visible z-990 fixed inset-0 bg-black/50 opacity-0 peer-checked/menu:opacity-100 transition-[opacity_visibility]"
+          ></label>
+          <a
+            href="#"
+            class="hidden md:block bg-[#75b8eb] hover:bg-[#0388ef] px-10 py-2 rounded-full font-medium text-white"
+            >Contact</a
+          >
+          <label for="menu-toggle" class="lg:hidden text-3xl">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="lg:block-center bottom-right mt-5 w-1/2 h-100"></div>
+    </main>
+  </body>
+</html>

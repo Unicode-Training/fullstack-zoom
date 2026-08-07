@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css");
 @import "tailwindcss";
 @important;
 @theme {
@@ -18,4 +19,12 @@
 
 .test-class2 {
   @apply bg-yellow-400;
+}
+
+@utility block-center {
+  @apply static bg-green-600 mx-auto;
+}
+
+@utility bottom-right {
+  @apply right-0 bottom-0 fixed bg-red-600;
 }

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output/output.css" />
+  </head>
+  <body class="h-[2000px]">
+    <!-- <div class="relative mx-auto border border-red-600 w-1/2 h-100">
+      <button
+        class="top-1.25 right-1 z-1 absolute bg-green-600 px-5 py-2 text-white"
+      >
+        Click
+      </button>
+      <span class="block top-5 right-0 absolute bg-red-600 px-3 py-1 text-white"
+        >Hello</span
+      >
+    </div>
+    <button
+      class="right-5 bottom-5 z-9999 fixed bg-red-600 rounded-full w-10 h-10 font-medium text-white"
+    >
+      Top
+    </button> -->
+    <h1 class="mb-3 text-3xl">Học Tailwind không khó</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ullam
+      vero, dolore architecto sit, molestiae quod deserunt tempore iusto alias
+      ab ut aperiam modi velit nostrum? Ipsum officia asperiores nulla?
+    </p>
+    <!-- <div
+      class="flex justify-center items-center mx-auto mt-10 border border-red-600 w-1/2 h-100 [&:hover>*]:transform-[rotate(30deg)_scale(1.5)]"
+    >
+      <span
+        class="block bg-green-600 w-50 h-50 transition-[visibility] duration-200 ease-linear"
+      ></span>
+    </div> -->
+    <button
+      class="flex items-center gap-3 bg-green-600 mx-auto mt-5 px-5 py-2 rounded-full text-white"
+    >
+      <span
+        class="block border-2 border-green-300 border-t-white rounded-full w-5 h-5 animate-[spin_1s_ease_infinite]"
+      ></span>
+      Click me
+    </button>
+    <button>
+      <label for="modal-toggle">Open modal</label>
+    </button>
+    <input
+      type="checkbox"
+      id="modal-toggle"
+      hidden
+      class="[&:checked~.modal]:block"
+    />
+    <div class="hidden modal">
+      <div
+        class="top-[5%] right-0 left-0 z-999 absolute bg-white mx-auto p-5 border border-gray-300 rounded-lg max-w-150"
+      >
+        <div class="flex justify-between mb-3 pb-3 border-gray-300 border-b">
+          <h2 class="font-medium text-xl">Modal title</h2>
+          <label
+            class="font-medium text-red-600 hover:text-red-600/50 text-2xl cursor-pointer"
+            for="modal-toggle"
+            >&times;</label
+          >
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            sapiente minima explicabo, accusamus consequatur rem quod facilis
+            fugiat exercitationem sunt iure dolores, sint consequuntur, ducimus
+            alias error deserunt. Ex, eum!
+          </p>
+        </div>
+      </div>
+      <label
+        for="modal-toggle"
+        class="z-990 absolute inset-0 bg-black/60"
+      ></label>
+    </div>
+  </body>
+</html>
