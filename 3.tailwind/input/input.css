@@ -3,18 +3,25 @@
 @import "tailwindcss";
 @important;
 @theme {
+  --color-abc: blueviolet;
   --font-open-sans: "Open Sans", serif;
+  --color-primary: #75b8eb;
+  --color-secondary: var(--color-green-600);
+  --text-heading-1: var(--text-3xl);
+  --text-heading-2: var(--text-xl);
+  --text-heading-3: var(--text-md);
+  --button-xl: 15px;
+  --button-lg: 10px;
+  --button-md: 5px;
 }
 
-@utility product-item {
+/* @utility product-item {
   @apply p-3 border border-gray-400;
 }
 
 .test-class {
   @apply text-green-600 hover:text-yellow-600;
-  /* &:hover {
-    @apply text-yellow-600;
-  } */
+  
 }
 
 .test-class2 {
@@ -27,4 +34,31 @@
 
 @utility bottom-right {
   @apply right-0 bottom-0 fixed bg-red-600;
+} */
+
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme="dark"] *));
+
+@utility container {
+  @apply mx-auto max-w-300;
 }
+
+@utility button {
+  @apply bg-primary px-10 py-2 rounded-full font-medium text-white;
+}
+
+@utility button-* {
+  @apply hover:bg-secondary! dark:bg-transparent! dark:border dark:border-[#ddd] rounded-full font-medium text-white;
+  background-color: --value(--color-*, [*], [*]);
+  border-radius: --modifier(--radius-*, [*], [*]);
+}
+
+@utility button-size-* {
+  padding-inline: --value(--button-*, [*], [*]);
+  padding-block: --modifier(--button-*, [*], [*]);
+}
+
+@custom-variant hocus (&:hover, &:focus);
+
+@custom-variant open (&[data-state="open"]);
