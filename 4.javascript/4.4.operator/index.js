@@ -72,3 +72,14 @@
 // let b = 10;
 // let c = a || b;
 // console.log(c);
+
+// let a = 0;
+// let b = 20;
+// let c = 30;
+// let result = a ? b : c;
+// console.log(result);
+
+//Toán logic cơ bản
+let salePrice = 590000;
+let discountRate = 15; //15%
+//Yêu cầu: Tìm giá gốc
