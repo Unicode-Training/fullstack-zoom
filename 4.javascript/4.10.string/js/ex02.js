@@ -69,12 +69,28 @@ let pos = content.toLowerCase().indexOf(keyword.toLowerCase());
 
 let newContent = '';
 
-if (pos !== -1) {
-    newContent = content.slice(0, pos) + `<span>${content.slice(pos, pos + keyword.length)}</span>` + content.slice(pos + keyword.length);
+let count = 0;
+
+while (pos !== -1) {
+    newContent += content.slice(0, pos) + `<span>${content.slice(pos, pos + keyword.length)}</span>`;
+
+    content = content.slice(pos + keyword.length);
+
+    pos = content.toLowerCase().indexOf(keyword.toLowerCase());
+
+    count++;
 }
+
+newContent += content;
 
 document.body.innerHTML = `
 <h2>Keyword: ${keyword}</h2>
 <h2>${newContent}</h2>
-<h2>Tìm được: 1</h2>
-`;  
+<h2>Tìm được: ${count}</h2>
+`;
+
+//Ý tưởng
+// 1. Tìm vị trí xuất hiện của keyword
+// 2. Lấy từ đầu đến keyword + thêm span vào vị trí keyword
+// 3. Cắt bỏ từ đầu cho đến hết keyword
+// Lặp lại bước 1
