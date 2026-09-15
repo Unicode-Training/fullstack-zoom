@@ -1,8 +1,8 @@
-console.log(Array.prototype);
+// console.log(Array.prototype);
 
-const myArr = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+// const myArr = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
 
-console.log(myArr);
+// console.log(myArr);
 
 // const newArr = myArr.concat([1, 2, 3], ['A', 'B', 'C'])
 // console.log(newArr);
@@ -81,12 +81,55 @@ console.log(myArr);
 // console.log(fruits);
 
 //Bài tập: Sắp xếp danh sách sau theo thứ tự tăng dần theo tên
-const names = [
-    "Phạm Minh Dũng",
-    "Hoàng Thu Thảo",
-    "Nguyễn Văn An",
-    "Vũ Hải Yến",
-    "Trần Thị Bình",
-    "Lê Hoàng Cường",
-];
+// const names = [
+//     "Phạm Minh Dũng",
+//     "Hoàng Thu Thảo",
+//     "Nguyễn Văn An",
+//     'Trương Minh Đức',
+//     "Vũ Hải Yến",
+//     "Trần Thị Bình",
+//     "Lê Hoàng Cường",
+// ];
 
+// const getFirstname = (fullname) => fullname.split(' ').at(-1);
+
+// names.sort((a, b) => {
+//     if (getFirstname(a).localeCompare(getFirstname(b), "vi") < 0) {
+//         return -1;
+//     }
+// });
+// console.log(names);
+
+// myArr.forEach((value, index) => {
+//     console.log(value, index);
+// })
+
+// const newArr = myArr.map((value, index) => {
+//     // return `${index + 1}: ${value}`
+//     return value.split(' ').at(0);
+// });
+
+// console.log(newArr);
+
+//Semantic
+
+// const number = [1, 2, 3, 4, 5, 6, 7];
+// const newArr = number.filter((value, index) => {
+//     // return value % 2 === 0;
+//     return index;
+// })
+// console.log(newArr);
+
+//Ví dụ: Tìm giao giữa 2 nảng: [3,8]
+// const arr1 = [
+//     5, 2, 9, 3, 8
+// ];
+
+// const arr2 = [
+//     3, 8, 1, 4
+// ]
+
+// const result = arr1.filter((value) => {
+//     return arr2.includes(value);
+// });
+// console.log(result);
