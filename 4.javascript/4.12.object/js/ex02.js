@@ -443,21 +443,25 @@ const menus = [
 const twoSum = (arr, K) => {
     const result = [];
     const seenNumbers = new Set();
-
+    const uniquePairs = new Set();
     for (let i = 0; i < arr.length; i++) {
         const currentNum = arr[i];
         const complement = K - currentNum;
+        const low = Math.min(complement, currentNum);
+        const high = Math.max(complement, currentNum);
+        const pairKey = `${low},${high}`;
 
         if (seenNumbers.has(complement)) {
-            result.push([complement, currentNum]);
-            seenNumbers.delete(complement);
-        } else {
-            seenNumbers.add(currentNum)
+            if (!uniquePairs.has(pairKey)) {
+                result.push([complement, currentNum]);
+                uniquePairs.add(pairKey);
+            }
         }
 
+        seenNumbers.add(currentNum);
     }
 
     return result;
 }
 
-console.log(twoSum([1, 2, 3, 4], 5));
+console.log(twoSum([2, 4, 2, 4], 6));
