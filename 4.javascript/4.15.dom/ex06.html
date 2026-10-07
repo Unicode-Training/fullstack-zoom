@@ -16,29 +16,31 @@
   </head>
   <body>
     <div class="mx-auto py-5 max-w-1/2 max-w-1/2">
-      <nav class="border-gray-200 border-b">
-        <ul class="flex items-center">
-          <li>
-            <a href="#tab-1" class="block bg-red-600 px-5 py-2 text-white"
-              >Tab 1</a
-            >
-          </li>
-          <li>
-            <a href="#tab-2" class="block bg-green-600 px-5 py-2 text-white"
-              >Tab 2</a
-            >
-          </li>
-          <li>
-            <a href="#tab-3" class="block bg-green-600 px-5 py-2 text-white"
-              >Tab 3</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <div class="js-tab-content tab-content">
-        <div class="py-2 active" id="tab-1">Content 1</div>
-        <div class="py-2" id="tab-2">Content 2</div>
-        <div class="py-2" id="tab-3">Content 3</div>
+      <div class="outline-none js-tabs" data-value="#tab-1" tabindex="1">
+        <nav class="border-gray-200 border-b">
+          <ul class="flex items-center">
+            <li>
+              <a href="#tab-1" class="block bg-green-600 px-5 py-2 text-white"
+                >Tab 1</a
+              >
+            </li>
+            <li>
+              <a href="#tab-2" class="block bg-green-600 px-5 py-2 text-white"
+                >Tab 2</a
+              >
+            </li>
+            <li>
+              <a href="#tab-3" class="block bg-green-600 px-5 py-2 text-white"
+                >Tab 3</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="js-tab-content tab-content">
+          <div class="py-2" id="tab-1">Content 1</div>
+          <div class="py-2" id="tab-2">Content 2</div>
+          <div class="py-2" id="tab-3">Content 3</div>
+        </div>
       </div>
     </div>
     <script src="js/ex06.js"></script>
