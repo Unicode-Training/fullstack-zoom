@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .box {
+        padding: 50px;
+        width: 300px;
+        margin: 30px auto;
+        border: 1px solid red;
+      } */
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .open .chatbox-body {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box">
+      <button>Click me</button>
+    </div> -->
+    <div
+      class="right-0 bottom-0 fixed border border-gray-200 w-[250px] js-chatbox"
+    >
+      <div
+        class="flex justify-between items-center bg-green-600 px-5 py-2 text-white cursor-pointer js-title"
+      >
+        <span class="font-semibold"> Chat với chúng tôi </span>
+        <span class="font-weight text-2xl js-close">&times;</span>
+      </div>
+      <div class="hidden bg-white p-3 h-[200px] chatbox-body">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
+          repellendus earum laboriosam ipsum voluptatibus quis aut harum labore
+          voluptatum quae! Fugit ipsa voluptate harum porro vero animi expedita
+          incidunt amet!
+        </p>
+      </div>
+    </div>
+    <script src="js/ex09.js"></script>
+  </body>
+</html>
