@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      /* body,
+      html {
+        scroll-behavior: smooth;
+      } */
+      .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      .active {
+        color: red;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-gray-200 shadow py-5">
+      <div class="flex justify-between mx-auto max-w-300">
+        <span class="font-semibold text-3xl">LOGO</span>
+        <ul class="flex items-center gap-5">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section
+        class="bg-green-300 border-white border-b min-h-screen"
+        id="home"
+      >
+        <div class="items-center mx-auto max-w-300">
+          <h2 class="font-semibold text-3xl">Home</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            libero quaerat quidem et ad expedita ullam pariatur tenetur iure,
+            quo amet autem quis officia quae recusandae dignissimos enim labore
+            voluptatem.
+          </p>
+        </div>
+      </section>
+      <section
+        class="bg-green-300 border-white border-b min-h-screen"
+        id="about"
+      >
+        <div class="items-center mx-auto max-w-300">
+          <h2 class="font-semibold text-3xl">About</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            libero quaerat quidem et ad expedita ullam pariatur tenetur iure,
+            quo amet autem quis officia quae recusandae dignissimos enim labore
+            voluptatem.
+          </p>
+        </div>
+      </section>
+      <section
+        class="bg-green-300 border-white border-b min-h-screen"
+        id="products"
+      >
+        <div class="items-center mx-auto max-w-300">
+          <h2 class="font-semibold text-3xl">Products</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            libero quaerat quidem et ad expedita ullam pariatur tenetur iure,
+            quo amet autem quis officia quae recusandae dignissimos enim labore
+            voluptatem.
+          </p>
+        </div>
+      </section>
+      <section
+        class="bg-green-300 border-white border-b min-h-screen"
+        id="contact"
+      >
+        <div class="items-center mx-auto max-w-300">
+          <h2 class="font-semibold text-3xl">Contact</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            libero quaerat quidem et ad expedita ullam pariatur tenetur iure,
+            quo amet autem quis officia quae recusandae dignissimos enim labore
+            voluptatem.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./js/ex11.js"></script>
+  </body>
+</html>
