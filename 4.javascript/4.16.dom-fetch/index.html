@@ -14,12 +14,23 @@
         class="my-3 px-3 py-2 border border-gray-200 outline-none w-full js-search"
         placeholder="Tìm kiếm..."
       />
+      <button class="bg-green-600 mb-3 px-3 py-1 text-white js-add-btn">
+        Add
+      </button>
       <div class="js-post-list"></div>
-      <!-- <div class="mb-3 pb-3 border-gray-200 border-b">
-        <h3 class="mb-2 text-xl">Tiêu đề</h3>
-        <p>Nội dung</p>
-      </div> -->
+      <div class="flex flex-wrap gap-3 js-post-pagination"></div>
     </div>
+    <div class="hidden js-modal">
+      <div
+        class="top-[5%] right-0 left-0 z-999 fixed bg-white mx-auto p-5 border border-gray-200 rounded-lg max-w-[600px]"
+      >
+        <div class="js-modal-content"></div>
+      </div>
+      <div
+        class="top-0 right-0 bottom-0 left-0 z-990 fixed bg-[#000000b5] js-modal-overlay"
+      ></div>
+    </div>
+
     <script src="js/index.js"></script>
   </body>
 </html>
