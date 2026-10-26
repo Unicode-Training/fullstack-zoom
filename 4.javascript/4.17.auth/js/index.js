@@ -1,17 +1,39 @@
 const getProfile = async () => {
     //Lấy accessToken
-    const accessToken = localStorage.getItem('accessToken');
-    const response = await fetch(`${BASE_URL}/profile/me`, {
-        headers: {
-            Authorization: `Bearer ${accessToken}`
-        }
-    });
+    // const accessToken = localStorage.getItem('accessToken');
+    // const response = await fetch(`${BASE_URL}/profile/me`, {
+    //     headers: {
+    //         Authorization: `Bearer ${accessToken}`
+    //     }
+    // });
+    // if (!response.ok) {
+    //     if (response.status !== 401) {
+    //         renderProfile(false, null);
+    //     } else {
+    //         //xử lý refresh token
+    //         const newToken = await getNewToken();
+    //         if (!newToken) {
+    //             localStorage.removeItem('accessToken');
+    //             localStorage.removeItem('refreshToken');
+    //             renderProfile(false, null);
+    //             return;
+    //         }
+    //         localStorage.setItem('accessToken', newToken.accessToken);
+    //         localStorage.setItem('refreshToken', newToken.refreshToken);
+    //         getProfile();
+    //     }
+
+    // } else {
+    //     const { user } = await response.json();
+    //     renderProfile(true, user);
+    // }
+
+    const response = await fetchWrapper(`${BASE_URL}/profile/me`);
     if (!response.ok) {
-        renderProfile(false, null);
-    } else {
-        const { user } = await response.json();
-        renderProfile(true, user);
+        return renderProfile(false, null);
     }
+    const { user } = await response.json();
+    renderProfile(true, user);
 
 }
 
@@ -47,5 +69,23 @@ const addEventLogout = () => {
     })
 }
 
+const getShoppingCart = async () => {
+    const response = await fetchWrapper(`${BASE_URL}/shopping-cart`);
+    const { items } = await response.json();
+    const html = items.map((item) => {
+        return `
+        <div class="mb-3 border-b border-gray-200 pb-3">
+        <p>Tên: ${item.name}</p>
+        <p>Giá: ${item.price}</p>
+        <p>Số lượng: ${item.quantity}</p>
+        <p>Thành tiền: ${item.total}</p>
+        </div>
+        `;
+    }).join('');
+    const cartRenderEl = document.querySelector('.cart-render');
+    cartRenderEl.innerHTML = html;
+}
+
 getProfile();
+getShoppingCart();
 addEventLogout();
