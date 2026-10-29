@@ -57,5 +57,13 @@ const getShoppingCart = async () => {
 }
 
 getProfile();
-// getShoppingCart();
+getProfile();
+getProfile();
+getProfile();
+getShoppingCart();
+getShoppingCart();
+getShoppingCart();
+getShoppingCart();
+getShoppingCart();
+getShoppingCart();
 addEventLogout();

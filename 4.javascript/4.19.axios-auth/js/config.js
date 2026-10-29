@@ -2,7 +2,8 @@ const BASE_URL = 'https://shop-api.unicode.vn';
 
 const api = axios.create({
     baseURL: BASE_URL,
-    timeout: 5000
+    timeout: 5000,
+
 });
 
 const getNewToken = async () => {
@@ -28,15 +29,25 @@ api.interceptors.request.use((config) => {
     return config;
 });
 
+let refreshTokenPromise = null;
+
 api.interceptors.response.use(response => response, async (error) => {
-    if (error.status === 401) {
-        const newToken = await getNewToken();
+    if (error.status === 401 && error.config.url !== '/auth/refresh') {
+        if (!refreshTokenPromise) {
+            refreshTokenPromise = getNewToken()
+        }
+        const newToken = await refreshTokenPromise;
+        refreshTokenPromise = null;
         if (newToken) {
             localStorage.setItem('accessToken', newToken.accessToken);
             localStorage.setItem('refreshToken', newToken.refreshToken);
-            return api(error.config);
+            return api(error.config); //retry
         }
 
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('refreshToken');
     }
     return Promise.reject(error);
 })
+
+//request -> interceptor request -> backend -> interceptor response -> client

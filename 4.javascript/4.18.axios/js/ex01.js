@@ -3,7 +3,8 @@ const api = axios.create({
     timeout: 5000,
     headers: {
         "x-api-key": "ahihi"
-    }
+    },
+    withCredentials: true
 });
 //Interceptor Request
 api.interceptors.request.use((config) => {
@@ -25,7 +26,7 @@ api.interceptors.response.use((response) => {
 //Interceptor Response
 const getPosts = async () => {
     try {
-        const response = await api.get('/posts1');
+        const response = await api.get('/posts');
         console.log(response.data);
         const total = response.headers['x-total'];
         console.log(total);
@@ -42,3 +43,6 @@ getPosts();
 //put -> axios.put(url, body, options)
 //patch -> axios.patch(url, body, options)
 //delete -> axios.delete(url, options)
+
+//backend: api.unicode.vn
+//Frontend: unicode.vn
