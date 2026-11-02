@@ -1,0 +1,22 @@
+{
+  "name": "4.21.package-manager",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev1": "node --watch src/app",
+    "dev2": "node --watch src/app2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "moment": "^2.31.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "concurrently": "^10.0.6",
+    "tailwindcss": "^4.3.3"
+  }
+}
