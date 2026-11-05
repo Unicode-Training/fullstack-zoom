@@ -5,11 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npm run lint && vite build",
+    "preview": "vite preview",
+    "lint": "eslint ./src --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.3.3",
+    "eslint": "^10.14.0",
+    "eslint-plugin-check-file": "^3.3.2",
+    "globals": "^17.14.0",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.5"
   },
