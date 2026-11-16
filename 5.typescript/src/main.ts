@@ -187,12 +187,235 @@
 //     }
 // }
 // const user = new User('An', 'an@gmail.com', 34);
+// interface AppError extends Error {
+//     status?: number;
+// }
+// try {
+//     const error: AppError = new Error("Lỗi gì đó...");
+//     error.status = 500;
+//     throw error;
+// } catch (error) {
+//     // if (error instanceof Error) {
+//     //     const err: AppError = error;
+//     //     console.log(err.message);
+//     //     console.log(err.status);
+//     // }
+//     const err = error as AppError;
+//     console.log(err.message);
+//     console.log(err.status);
+// }
 
-try {
-    const error = new Error("Lỗi gì đó...");
-    error.status = 500;
-    throw error;
-} catch (error) {
-    console.log(error.message);
-    console.log(error.status);
+//Union Type
+// const user = {
+//     id: 10,
+//     name: 'An',
+//     age: 34
+// }
+// const key: "id" | "name" | "age" = "name";
+// console.log(user[key]);
+
+// const getOption = (key: "name" | "email" | "password") => { }
+// getOption("password")
+
+// const user = {
+//     id: 10,
+//     name: 'An',
+//     age: 34,
+//     address: 'HN'
+// }
+
+// const getUser = (key: keyof typeof user) => {
+//     return user[key];
+// }
+// getUser("name")
+
+// const a = ['10', '20'];
+// type A = typeof a;
+
+// interface User {
+//     id: number;
+//     name: string
+// }
+
+// const getUser = (user: User, key: keyof User) => {
+//     return user[key];
+// }
+
+// getUser({
+//     id: 10,
+//     name: 'An'
+// }, 'name')
+
+// type Info = {
+//     [key: string]: unknown;
+// }
+
+// const info: Info = {
+//     name: 'An',
+//     email: 'an@gmail.com',
+//     age: 32,
+//     status: 0
+// }
+
+// const a: string = info.name
+
+// const value: number | undefined = undefined;
+// const getValue = (val: number) => { }
+// getValue(value!);
+
+//user!.name
+
+//Từ khóa readonly
+// type User = {
+//     readonly id: number;
+//     name: string;
+//     status: boolean
+// }
+// const user = {
+//     id: 10,
+//     name: 'An',
+//     status: false
+// } as const;
+
+// user.name = 'An';
+
+// const a = ["An"] as const;
+// a.fill('a')
+
+// const a: readonly number[] = [1, 2, 3];
+
+// const a: number = 10;
+
+// type User<T> = {
+//     id: number;
+//     name: string;
+//     info: T
+// }
+
+// const user1: User<{
+//     address: string;
+//     province: string;
+// }> = {
+//     id: 1,
+//     name: 'An',
+//     info: {
+//         address: 'HN',
+//         province: 'Hn'
+//     }
+// }
+
+// const user2: User<{
+//     ward: string;
+//     district: string;
+// }> = {
+//     id: 1,
+//     name: 'Quý',
+//     info: {
+//         ward: 'Tây Mỗ',
+//         district: 'Từ Liêm'
+//     }
+// }
+
+// const getUser = <T>(user: T) => {
+
+// }
+
+// function getUser<T>(user: T, key: keyof T) {
+//     console.log(user[key]);
+// }
+
+// type User = {
+//     id: number;
+//     name: string
+// }
+
+// getUser<User>({ id: 1, name: 'An' }, "name")
+
+// class User<T> {
+//     public data: T
+//     constructor(data: T) {
+//         this.data = data;
+//     }
+// }
+
+// const user = new User<{ id: number }>({ id: 1 })
+
+//Khai báo kiểu là hàm: (thamso1: kieu, thamso2: kieu) => giatritrave
+
+// type User = {
+//     showInfo: () => void;
+//     getName(): string;
+// }
+
+// const debounce = (callback: (...args: unknown[]) => void, timeout = 500) => {
+//     let id: number;
+//     return (...args: unknown[]) => {
+//         if (id) {
+//             clearTimeout(id);
+//         }
+//         id = setTimeout(() => {
+//             callback(...args);
+//         }, timeout);
+//     }
+// }
+
+// debounce((a: number, b: number) => {
+//     console.log(a);
+//     console.log(b);
+// }, 1000);
+
+// type User = {
+//     id: number;
+//     name: string;
+//     email: string;
+// }
+
+// type User2 = Partial<User>;
+
+// type User = {
+//     id?: number;
+//     name?: string;
+//     email?: string;
+// }
+
+// type User2 = Required<User>;
+
+// type User = {
+//     id: number;
+//     name: string;
+//     email: string;
+// }
+// type User2 = Omit<User, 'email' | 'id'>;
+
+// type User = {
+//     id: number;
+//     name: string;
+//     email: string;
+// }
+// type User2 = Readonly<User>
+
+// const sum = (a: number, b: number) => a + b;
+// type Sum = ReturnType<typeof sum>;
+
+// type User = {
+//     id: number;
+//     name: string;
+//     email: string;
+// }
+// type User2 = Pick<User, 'name' | 'email'>;
+
+type User = {
+    id: number;
+    name: string;
+    email: string;
+}
+
+// const data: Record<"x" | "y", User> = {
+//     x: { id: 1, name: 'An', email: 'an@gmail.com' },
+//     y: { id: 2, name: 'Tuấn', email: 'tuan@gmail.com' }
+// }
+
+const data: Record<"x" | "y", string[] | number[]> = {
+    x: [1, 2, 3],
+    y: ['A', 'B', 'C']
 }
